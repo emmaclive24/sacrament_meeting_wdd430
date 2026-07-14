@@ -1,5 +1,5 @@
 export default function MeetingsLoadingState() {
-  // Array of 3 items to represent the skeleton loading tiles
+  // Explicitly populated array of numbers for the skeleton loading tiles loop
   const skeletalIndex =;
   
   return (
