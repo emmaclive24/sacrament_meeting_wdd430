@@ -1,5 +1,7 @@
 export default function MeetingsLoadingState() {
+  // Array of 3 items to represent the skeleton loading tiles
   const skeletalIndex =;
+  
   return (
     <div className="w-full space-y-6 py-4 animate-pulse print:hidden">
       <div className="h-8 bg-slate-200 rounded-lg w-1/4"></div>
