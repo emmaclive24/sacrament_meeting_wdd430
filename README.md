@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Pull Request URL             https://github.com/emmaclive24/sacrament_meeting_wdd430/pull/1 
+
+GitHub repository URL        https://github.com/emmaclive24/sacrament_meeting_wdd430 
+
+Vercel preview URL          https://sacrament-meeting-wdd430-qu9dze1ak-emmaclive24-2214s-projects.vercel.app
+
+
+
+
 ## Getting Started
 
 First, run the development server:
