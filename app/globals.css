@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 1. TAILWIND V4 NATIVE THEME LAYER */
+@theme {
+  /* Safely inject your design tokens into Tailwind's engine */
+  --color-slate-background: #f1f5f9;
+  --color-slate-main: #0f172a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* 2. BASE UTILITY EXTENSIONS */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    /* Uses the theme tokens created above so utilities stay unblocked */
+    background-color: var(--color-slate-background);
+    color: var(--color-slate-main);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* 3. RESPONSIVE PRINT UTILITIES */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  .print\:text-black {
+    color: black !important;
+  }
+  
+  .print\:bg-white {
+    background-color: white !important;
+  }
+  
+  .print\:bg-slate-100 {
+    background-color: #f1f5f9 !important;
+  }
+  
+  .print\:border-slate-300 {
+    border-color: #cbd5e1 !important;
+  }
+  
+  .print\:border-none {
+    border-style: none !important;
+  }
+  
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+  
+  .print\:p-0 {
+    padding: 0 !important;
+  }
 }
